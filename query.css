@@ -1,0 +1,105 @@
+/* Media query */
+@media screen and (max-width: 1024px) {
+  body {
+    position: relative;
+  }
+
+  .nav-link {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    gap: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .nav-link li {
+    width: 100%;
+    box-shadow: -2rem 4rem 4rem rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .nav-link li a {
+    background-color: var(--color-white);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem 0 2.5rem;
+    border-top: 1px solid #b3d8e1;
+  }
+
+  .nav-link li a.active::after {
+    display: hidden;
+  }
+
+  .nav-toggle-btn {
+    display: block;
+    position: absolute;
+    right: 3.5%;
+    font-size: 2rem;
+    color: var(--color-black);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  #nav-toggle-close {
+    display: none;
+  }
+  .nav-link li:nth-child(1) {
+    -webkit-animation: roll-in-left 0.8s ease-out both;
+    animation: roll-in-left 0.8s ease-out both;
+  }
+  .nav-link li:nth-child(2) {
+    -webkit-animation: roll-in-left 1.2s ease-out both;
+    animation: roll-in-left 1.2s ease-out both;
+  }
+  .nav-link li:nth-child(3) {
+    -webkit-animation: roll-in-left 1.6s ease-out both;
+    animation: roll-in-left 1.6s ease-out both;
+  }
+  .nav-link li:nth-child(4) {
+    -webkit-animation: roll-in-left 2s ease-out both;
+    animation: roll-in-left 2s ease-out both;
+  }
+  .nav-link li:nth-child(5) {
+    -webkit-animation: roll-in-left 2.4s ease-out both;
+    animation: roll-in-left 2.4s ease-out both;
+  }
+
+  @-webkit-keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+      transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+      transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .price-card .pack ul{
+    padding-left: 20px !important;
+  }
+  .price-card .pack ul li{
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
